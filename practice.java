@@ -21,6 +21,19 @@ public static void fact(int n) {
     }
     System.err.println(num);
 }
+    public  static  int  bintoint(int n){
+    int dec=0;
+    int tem,i=0;
+    while(n>0){
+        tem = n % 10;
+        if(tem==1){
+            dec=dec+ (int)Math.pow(2,i);
+        }
+        i++;
+        n=n/10;
+    }
+    return dec;
+}
 
 
     public static void main(String atgs[]){
