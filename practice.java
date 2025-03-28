@@ -69,6 +69,34 @@ for (int i = num; i >0 ; i--) {
 
 }
 
+    public static void dimond(){
+     Scanner sc= new Scanner(System.in);
+     int num=sc.nextInt();
+
+     for (int i = 0; i < num; i++) {
+         for (int j = 0; j < num; j++) {
+            if(j<num-i) {System.out.print(" ");}
+             else{System.out.print("*");}
+         }
+          for (int j = 0; j < i; j++) {
+            
+             System.out.print("*");
+         }
+          System.err.println("");
+     }
+       for (int i =num; i >0; i--) {
+         for (int j = 0; j < num; j++) {
+            if(j<num-i) {System.out.print(" ");}
+             else{System.out.print("*");}
+         }
+          for (int j = 0; j < i; j++) {
+            
+             System.out.print("*");
+         }
+          System.err.println("");
+     }
+}
+
     public static void main(String atgs[]){
  
     }
