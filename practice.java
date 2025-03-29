@@ -96,6 +96,24 @@ for (int i = num; i >0 ; i--) {
           System.err.println("");
      }
 }
+public static  void reverse(){
+     Scanner sc= new Scanner(System.in);
+     
+     System.out.println(" enter the length of array");
+        int num=sc.nextInt();
+          int  array[]=new int[num];
+       for (int i = 0; i < num; i++) {
+           array[i]=sc.nextInt();
+        }
+
+int tem=0;
+   for (int i = 0; i < num/2; i++) {
+       tem=array[i];
+      array[i] =array[num-i-1];
+       array[num-i-1]=tem;} 
+for (int i = 0; i < num; i++) {
+    System.out.println(array[i]);} }
+
 
     public static void main(String atgs[]){
  
