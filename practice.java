@@ -114,7 +114,31 @@ int tem=0;
 for (int i = 0; i < num; i++) {
     System.out.println(array[i]);} }
 
+  public static void print_subarray_and_there_sum() {
 
+        int max=Integer.MIN_VALUE,min=Integer.MAX_VALUE,tem=0;
+        Scanner sc= new Scanner(System.in);
+        int num=sc.nextInt();
+        int  array[]=new int[num];
+        int  copy[]=new int[num];
+for (int i = 0; i < num; i++) { array[i]=sc.nextInt();} 
+for (int i = 0; i < num; i++) { if(i==0){copy[i]=array[i];}else{copy[i]=copy[i-1]+array[i];}} 
+for (int i = 0; i < num; i++) { System.out.print(" "+copy[i]);} 
+for (int i = 0; i < num; i++) {
+    for (int j = i+1; j < num; j++) {
+       
+        System.out.print("(");
+        System.out.print(array[i]+","+array[j]);
+        if(i==0){tem=copy[j];}
+        else{ tem=copy[j]-copy[i-1];}
+       
+        System.out.print(")="+tem+" ");
+       
+
+    
+    }
+    System.out.println("");}
+}
     public static void main(String atgs[]){
  
     }
