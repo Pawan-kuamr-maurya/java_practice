@@ -139,6 +139,47 @@ for (int i = 0; i < num; i++) {
     }
     System.out.println("");}
 }
+
+    public static void trapingwater() {
+      Scanner sc= new Scanner(System.in);
+   System.out.println(" enter the length of array");
+int num=sc.nextInt();
+int  array[]=new int[num];
+int  rightmax[]=new int[num];
+int  leftmax[]=new int[num];
+for (int i = 0; i < num; i++) {
+    array[i]=sc.nextInt();
+}
+int rightmaxval=Integer.MIN_VALUE,leftmaxval=Integer.MIN_VALUE;
+for (int i = 1; i < num-1; i++) {
+ 
+    if(array[num-i]>rightmaxval){
+        rightmaxval=array[num-i];  }
+         rightmax[num-i-1]=rightmaxval;
+      if(array[i-1]>leftmaxval){
+         leftmaxval=array[i-1];
+      } leftmax[i]=leftmaxval;
+}
+
+
+int water=0 , tem=0;
+for (int i = 0; i < num; i++) {
+    if(i==0||i==num-1){
+        continue;
+    }
+    tem=Math.min(rightmax[i],leftmax[i]);
+    if(tem>array[i]){
+        tem=tem-array[i];
+    }else{
+         tem=0;
+    }
+  
+    water=tem+water;
+      tem=0;
+}
+System.err.println(water);
+}
+
     public static void main(String atgs[]){
  
     }
