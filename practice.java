@@ -179,6 +179,33 @@ for (int i = 0; i < num; i++) {
 }
 System.err.println(water);
 }
+    public static void stocks_buy_sell_profit() { // bad way to do it dont use it 
+         Scanner sc= new Scanner(System.in);
+        System.out.println(" enter the length of array");
+        int num=sc.nextInt();
+         int  array[]=new int[num];
+         for (int i = 0; i < num; i++) { array[i]=sc.nextInt();} 
+        int  leftbiggest[]=new int[num],leftbiggestday[]=new int[num],day=-1,tem=Integer.MIN_VALUE;
+for (int i = num-1; i >= 0; i--) {
+    if(array[i]>tem){
+        tem=array[i];
+        day=i;
+    }
+    leftbiggest[i]=tem;
+    leftbiggestday[i]=day;
+}
+ day=-1 ;tem=-1;
+ int profit=Integer.MIN_VALUE;
+for (int i = 0; i < num; i++) {
+    if(leftbiggest[i]-array[i]>profit){
+        profit=leftbiggest[i]-array[i];
+        day=i;
+        tem=leftbiggestday[i];
+    }
+}
+System.out.println("start: "+day+"\n"+"end: "+tem+"\n profit: "+profit );
+
+}
 
     public static void main(String atgs[]){
  
