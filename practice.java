@@ -206,7 +206,24 @@ for (int i = 0; i < num; i++) {
 System.out.println("start: "+day+"\n"+"end: "+tem+"\n profit: "+profit );
 
 }
+public static void newatock_give_max_profit() {
+       Scanner sc= new Scanner(System.in);
+        System.out.println(" enter the length of array");
+int num=sc.nextInt();
+int  array[]=new int[num];
+for (int i = 0; i < num; i++) { array[i]=sc.nextInt();} 
+int profit=Integer.MIN_VALUE,min=array[0];
+for (int i = 1; i < num; i++) {
+    if(array[i]>min){
+        if((array[i]-min)> profit)
+        {profit=array[i]-min;}
 
+    }else{
+        min=array[i];
+    }
+}
+System.err.println(profit);
+}
     public static void main(String atgs[]){
  
     }
