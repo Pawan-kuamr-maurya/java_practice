@@ -224,6 +224,43 @@ for (int i = 1; i < num; i++) {
 }
 System.err.println(profit);
 }
+
+
+public static void spiralprint() {
+    
+  int matri[][]={
+    {1,2,3,4,5},
+    {6,7,8,9,10},
+    {11,12,13,14,15},
+    {16,17,18,19,20},
+    {21,22,23,24,25}};
+    
+int sratrow=0,startcoloumn=0,end_row=matri.length-1,end_col=matri[0].length-1;
+
+while (sratrow<=end_row&&startcoloumn<=end_col) { 
+   for (int i = startcoloumn; i <=end_col; i++) {
+    System.err.println(matri[sratrow][i] );
+              
+   }
+
+    for (int i = sratrow+1; i <=end_row; i++) {
+        System.err.println(matri[i][end_col]);
+        
+   }
+    for (int i = end_col-1; i >=startcoloumn; i--) {
+        System.err.println(matri[end_row][i]);
+        
+   }
+    for (int i = end_row-1; i > sratrow ; i--) {
+        System.err.println(matri[i][startcoloumn]);
+        
+   }
+   sratrow=sratrow+1;
+   end_row=end_row-1;
+   startcoloumn = startcoloumn+1;
+   end_col = end_col-1;
+}         
+}
     public static void main(String atgs[]){
  
     }
