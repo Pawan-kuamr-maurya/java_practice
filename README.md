@@ -10,3 +10,4 @@ stocks_buy_sell_profit();
 newsatock_give_max_profit();
 spiralprint();
 dimond();
+dignolssum()
