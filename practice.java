@@ -288,6 +288,26 @@ public static void dimond(){
           System.err.println("");
      }
 }
+
+    public static void dignolssum() {
+   Scanner sc=new Scanner(System.in);
+   System.out.println("inter the one dimension of  the squre matrix"); 
+   int dimension=sc.nextInt();
+   int  matrix[][]=new int[dimension][dimension];
+for (int i = 0; i < dimension; i++) {
+    for (int j = 0; j < dimension; j++) {
+        matrix[i][j]=sc.nextInt();
+    }
+}
+int  sum=0;
+    for (int j = 0; j < dimension; j++) {
+ if(j==(dimension-j-1)){ sum= matrix[j][j]+sum; continue;}
+       sum= matrix[j][j]+matrix[j][dimension-j-1] +sum;
+      
+    }
+  System.out.println(sum);
+
+}
     public static void main(String atgs[]){
  
     }
