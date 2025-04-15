@@ -308,6 +308,36 @@ int  sum=0;
   System.out.println(sum);
 
 }
+
+    public static void serchin_sorted_matrix() {
+     Scanner sc=new Scanner(System.in);
+   System.out.println("inter the one dimension of  the squre matrix"); 
+   int dimension=sc.nextInt();
+   int  matrix[][]=new int[dimension][dimension];
+for (int i = 0; i < dimension; i++) {
+    for (int j = 0; j < dimension; j++) {
+        matrix[i][j]=sc.nextInt();
+    }
+} 
+System.out.println("enter the element to be serch");
+ int key=sc.nextInt();
+ for (int i = 0; i < dimension; i++) {
+    if(matrix[0][i]==key){ System.out.println("found elemet  at:"+0 +" "+i);}
+     if((matrix[0][i]<key && i!=dimension-1 && matrix[0][i+1]>key)||i==dimension-1){
+       for (int j = 0; j < dimension; j++) {
+           if(matrix[j][i]==key){
+            System.out.println("found elemet  at:"+j +" "+i);
+            return;
+           }
+       }
+        System.out.println("found not elemet ");
+       return;
+
+     }
+ }
+
+
+}
     public static void main(String atgs[]){
  
     }
