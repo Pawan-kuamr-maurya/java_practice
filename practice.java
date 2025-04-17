@@ -337,7 +337,31 @@ System.out.println("enter the element to be serch");
  }
 
 
+}public static void sortestdistance(String str) {
+    int x=0,y=0;
+    double length=0;
+    for (int i = 0; i < str.length(); i++) {
+        switch (str.charAt(i)) {
+            case 'e' :
+                y++;
+                break;
+            case 'w':
+                y--;
+                break;
+            case 'n':
+                x++;
+                break;
+            case 's':
+                x--;
+                break;
+
+           
+        }
+    }
+    length=Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+    System.out.println(length);
 }
+    
     public static void main(String atgs[]){
  
     }
