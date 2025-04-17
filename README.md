@@ -12,3 +12,4 @@ spiralprint();
 dimond();
 dignolssum()
 serchin_sorted_matrix()
+sortestdistance(String str)
