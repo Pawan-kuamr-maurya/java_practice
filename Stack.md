@@ -20,4 +20,20 @@ This project demonstrates two ways to implement a stack data structure in Java:
 - **peek():** Returns the top element without removing it. If empty, prints a message and returns `-1`.
 
 
-feel free to contribute
+
+
+
+## 2. Stack Using Singly Linked List (Stack_LinkList)
+Overview:
+Uses a custom Node class with data and next.
+- Maintains an `head` to track the top position in the stack.
+- Supports `push`, `pop`, and `peek` operations.
+Key Methods:
+- **push(int value):** Creates a new node and adds it at the top.
+- **pop():** Removes and returns the top element.
+ **peek():** Returns the top element without removing it.
+
+
+---
+
+Would you like me to format this markdown with proper code blocks or add anything else?
