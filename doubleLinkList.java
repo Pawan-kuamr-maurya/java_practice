@@ -105,6 +105,22 @@ public class Doublelinklist {
     System.out.println("Removed node with data: " + nodeToRemove.data);
     return nodeToRemove.data;
   }
+  public void reverse(){
+    Node current=head;
+   Node originalHead = head;
+    Node prevNode=null;
+    Node nextnNode=null;
+    while (current!=null) { 
+        nextnNode=current.next;
+        current.next=prevNode;
+       current.prev=nextnNode;
+       prevNode=current;
+       current=nextnNode;
+       
+    }
+  head = prevNode;
+    tail = originalHead; // The original head becomes tail
+}
 
   public static void main(String[] args) {
     Doublelinklist l = new Doublelinklist(0);
