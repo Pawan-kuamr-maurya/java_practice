@@ -1,0 +1,69 @@
+# Queue Operations in Java
+
+This project demonstrates various operations on queues in Java, including:
+- Interleaving a string using queues
+- Finding the first non-repeating character in a string
+- Reversing a queue using a stack
+
+It also includes implementations of queue data structures using linked list and array.
+
+---
+
+## Features
+
+- **Interleave Queue**: Reorganizes a string by splitting and interleaving halves.
+- **First Non-Repeating Character**: Finds the first character in a string that doesn't repeat.
+- **Queue Reversal**: Reverses a queue using a stack.
+- **Queue Implementations**:
+  - Using `LinkedList`
+  - Using an Array with circular queue logic
+
+---
+
+## Classes
+
+### `Queuedsa`
+Main class containing static methods to perform:
+- Interleaving string (`interleav_queue`)
+- Finding first non-repeating character (`firstnonrepeatingLetter`)
+- Reversing a queue (`Queuereverse`)
+- `main` method to test functionalities
+
+### `queueusingLinklist`
+Implements a queue using Java's `LinkedList`.
+
+**Methods:**
+- `add(int num)`: Enqueue
+- `remove()`: Dequeue
+- `peek()`: View front element
+- `isEmpty()`: Check if queue is empty
+- `length()`: Get size of queue
+
+### `queueUsingArray`
+Implements a circular queue using an array.
+
+**Methods:**
+- Constructor `queueUsingArray(int n)`: Initialize queue with size `n`
+- `add(int num)`: Enqueue
+- `remove()`: Dequeue
+- `peek()`: View front element
+- `isEmpty()`: Check if empty
+- `isFull()`: Check if full
+- `print()`: Print elements
+
+---
+
+## Usage
+
+### Example: Reverse a Queue
+
+```java
+Queue<Integer> q1 = new LinkedList<>();
+q1.add(1);
+q1.add(2);
+q1.add(3);
+q1.add(4);
+q1.add(5);
+q1.add(6);
+
+Queuedsa.Queuereverse(q1);
